@@ -127,6 +127,14 @@
     <h2 class="sec-ttl">문의하기</h2>
     <p class="sec-sub">궁금한 점이나 의견을 남겨주세요. 빠르게 답변드릴게요.</p>
     <form class="contact-card" id="contactForm" novalidate>
+      <div class="field">
+        <label>문의 종류</label>
+        <div class="radio-row">
+          <label class="radio"><input type="radio" name="type" value="서비스 관련" checked/><span>서비스 관련</span></label>
+          <label class="radio"><input type="radio" name="type" value="제휴 및 광고"/><span>제휴 및 광고</span></label>
+          <label class="radio"><input type="radio" name="type" value="기타"/><span>기타</span></label>
+        </div>
+      </div>
       <div class="form-row">
         <div class="field">
           <label for="cf-name">이름</label>

@@ -57,6 +57,8 @@
     var name = document.getElementById('cf-name').value.trim();
     var email = document.getElementById('cf-email').value.trim();
     var message = document.getElementById('cf-message').value.trim();
+    var typeEl = form.querySelector('input[name="type"]:checked');
+    var type = typeEl ? typeEl.value : '';
 
     if (!name || !email || !message) {
       setMsg('이름·이메일·문의 내용을 모두 입력해 주세요.', 'err');
@@ -103,7 +105,7 @@
       email: email,
       name: name,
       message: message,
-      type: 'homepage',
+      type: type,
       referrer: document.referrer || '',
       ts_token: ts_token
     }));
