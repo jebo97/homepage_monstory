@@ -72,6 +72,9 @@ section{padding:54px 0}
 .form-msg{margin-top:14px;font-size:14px;text-align:center;min-height:20px}
 .form-msg.ok{color:var(--teal);font-weight:700}
 .form-msg.err{color:#d64545;font-weight:700}
+.contact-note{max-width:560px;margin:16px auto 0;font-size:12.5px;line-height:1.6;color:var(--t3);text-align:center}
+.contact-note a{color:var(--t2);text-decoration:underline}
+.contact-note a:hover{color:var(--teal)}
 /* modal */
 .modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}
 .modal[hidden]{display:none}
