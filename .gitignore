@@ -1,1 +1,5 @@
 .DS_Store
+
+# 미사용 원본 아이콘 (1254px) — 페이지에서 참조하지 않음
+icons/icon_512.png
+icons/icon_navy_512.png
