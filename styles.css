@@ -66,10 +66,23 @@ section{padding:54px 0}
 .field textarea{resize:vertical;min-height:120px;line-height:1.6}
 .cf-turnstile{margin-bottom:16px}
 .contact .btn{width:100%;justify-content:center}
-.contact .btn:disabled{opacity:.6;cursor:default;transform:none}
+.contact .btn:disabled{opacity:.85;cursor:default;transform:none}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
 .form-msg{margin-top:14px;font-size:14px;text-align:center;min-height:20px}
 .form-msg.ok{color:var(--teal);font-weight:700}
 .form-msg.err{color:#d64545;font-weight:700}
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal[hidden]{display:none}
+.modal-backdrop{position:absolute;inset:0;background:rgba(15,23,42,.45);backdrop-filter:blur(2px);animation:fade .18s ease}
+.modal-box{position:relative;background:var(--card);border-radius:20px;padding:34px 30px;max-width:380px;width:100%;text-align:center;box-shadow:0 24px 60px rgba(28,48,74,.28);animation:pop .2s ease}
+.modal-ic{width:60px;height:60px;border-radius:50%;background:rgba(34,139,134,.12);color:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.modal-box h3{font-size:19px;margin-bottom:8px}
+.modal-box p{font-size:14.5px;color:var(--t2);margin-bottom:22px}
+.modal-box .btn{width:100%;justify-content:center}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
 /* footer */
 footer{padding:30px 0 50px;border-top:1px solid var(--bd);margin-top:40px}
 footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}

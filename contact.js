@@ -5,10 +5,34 @@
 
   var msg = document.getElementById('cf-msg');
   var submitBtn = document.getElementById('cf-submit');
+  var modal = document.getElementById('doneModal');
 
   function setMsg(text, kind) {
     msg.textContent = text;
     msg.className = 'form-msg' + (kind ? ' ' + kind : '');
+  }
+
+  // 완료 팝업 열기/닫기
+  function openModal() {
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    var okBtn = modal.querySelector('.btn');
+    if (okBtn) okBtn.focus();
+  }
+  function closeModal() {
+    if (!modal || modal.hidden) return;
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  if (modal) {
+    modal.querySelectorAll('[data-close]').forEach(function (el) {
+      el.addEventListener('click', closeModal);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
   }
 
   // Cloudflare Turnstile 토큰 가져오기
@@ -26,7 +50,7 @@
     }
   }
 
-  form.addEventListener('submit', async function (e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
     setMsg('', '');
 
@@ -45,35 +69,43 @@
       return;
     }
 
-    var origLabel = submitBtn.textContent;
+    var origLabel = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.textContent = '보내는 중…';
+    submitBtn.innerHTML = '<span class="spinner"></span>보내는 중…';
 
-    try {
-      var res = await fetch('https://monstory.app/api/contact.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: email,
-          name: name,
-          message: message,
-          type: 'homepage',
-          referrer: document.referrer || '',
-          ts_token: ts_token
-        })
-      });
-
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-
-      setMsg('문의가 접수되었어요. 빠르게 답변드릴게요!', 'ok');
-      form.reset();
-      resetTurnstile();
-    } catch (err) {
+    function restoreBtn() {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = origLabel;
+    }
+    function onFail() {
       setMsg('전송에 실패했어요. 잠시 후 다시 시도해 주세요.', 'err');
       resetTurnstile();
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = origLabel;
+      restoreBtn();
     }
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://monstory.app/api/contact.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        form.reset();
+        resetTurnstile();
+        setMsg('', '');
+        openModal();
+        restoreBtn();
+      } else {
+        onFail();
+      }
+    };
+    xhr.onerror = onFail;
+    xhr.ontimeout = onFail;
+    xhr.send(JSON.stringify({
+      email: email,
+      name: name,
+      message: message,
+      type: 'homepage',
+      referrer: document.referrer || '',
+      ts_token: ts_token
+    }));
   });
 })();
