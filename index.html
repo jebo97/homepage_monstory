@@ -30,11 +30,16 @@ gtag('config','G-HTZ3LV5EJL');
 <meta name="twitter:card" content="summary_large_image"/>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2998248013502526" crossorigin="anonymous"></script>
-<!-- Favicons: 라이트/다크 모드 자동 전환 -->
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" media="(prefers-color-scheme: light)"/>
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png" media="(prefers-color-scheme: light)"/>
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-dark-32.png" media="(prefers-color-scheme: dark)"/>
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-dark-16.png" media="(prefers-color-scheme: dark)"/>
+<!-- Favicons: 라이트(조건 없음=기본) + 다크 모드 자동 전환.
+     ⚠ 라이트에는 media 를 넣지 말 것 — 구글 크롤러는 prefers-color-scheme 를 못 읽어
+        조건 없는 파비콘이 없으면 검색결과에 기본 지구본을 띄운다. favicon.ico 도 root 에 함께 둘 것. -->
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png?v=5"/>
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png?v=5"/>
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png?v=5"/>
+<link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-dark-48.png?v=5" media="(prefers-color-scheme: dark)"/>
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-dark-32.png?v=5" media="(prefers-color-scheme: dark)"/>
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-dark-16.png?v=5" media="(prefers-color-scheme: dark)"/>
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"/>
 <meta name="theme-color" content="#f0f4f9" media="(prefers-color-scheme: light)"/>
 <meta name="theme-color" content="#1c304a" media="(prefers-color-scheme: dark)"/>
