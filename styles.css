@@ -272,7 +272,7 @@ section.chars{background:#fff8e6}
 .future:hover{transform:translateY(-5px) rotate(-1.5deg)}
 .future .em{font-size:36px;margin-bottom:10px}
 .future b{font-family:'Jua',sans-serif;display:block;font-size:16px;margin-bottom:4px}
-.future span{font-size:13px;color:var(--t3);line-height:1.55}
+.future span{display:block;font-size:13px;color:var(--t3);line-height:1.55}
 .future .soon{font-family:'Fredoka',sans-serif;display:inline-block;margin-top:12px;font-size:11px;font-weight:600;letter-spacing:.5px;color:var(--navy);background:var(--rito2);border:1.5px solid var(--navy);border-radius:20px;padding:3px 11px}
 
 /* cute CTA on story page */
