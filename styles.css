@@ -30,7 +30,7 @@ a{text-decoration:none;color:inherit}
 /* sections */
 section{padding:54px 0}
 .sec-ttl{text-align:center;margin-bottom:8px;font-size:28px;letter-spacing:-.3px}
-.sec-sub{text-align:center;color:var(--t3);font-size:15px;margin-bottom:40px}
+.sec-sub{text-align:center;color:#5a7290;font-size:15px;margin-bottom:40px}
 /* features */
 .feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .feat{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:24px 24px}
