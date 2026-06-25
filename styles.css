@@ -289,3 +289,8 @@ section.chars{background:#fff8e6}
   .future-grid{grid-template-columns:repeat(2,1fr)}
   .deco{display:none}
 }
+
+/* respect reduced-motion preference (a11y) */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
