@@ -52,6 +52,14 @@ section{padding:54px 0}
 .rarrow{align-self:center;color:var(--teal);font-size:26px;font-weight:800;margin-top:70px}
 .rscan-note{text-align:center;margin:30px auto 0;display:block;width:max-content;max-width:100%;background:rgba(34,139,134,.10);color:var(--teal);font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:20px}
 .rscan-note b{font-weight:800}
+/* faq */
+.faq{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:0 20px}
+.faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:15px;color:var(--navy);padding:17px 0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:var(--teal);font-weight:800;font-size:20px;line-height:1;flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item>p{font-size:14px;color:var(--t2);line-height:1.65;padding:0 0 18px;margin-top:-2px}
 /* showcase */
 .showcase{background:var(--navy);color:#fff}
 .showcase .sec-ttl{color:#fff}.showcase .sec-sub{color:#aebfd4}
@@ -72,6 +80,8 @@ section{padding:54px 0}
 .cta h2{font-size:26px;margin-bottom:10px}.cta p{color:#cfe0ef;margin-bottom:24px}
 /* contact */
 .contact{padding-top:0}
+/* 문의 폼: FAQ 아코디언과 동일한 디자인, 펼치면 폼 표시 */
+.contact-toggle .contact-card{background:none;border:0;box-shadow:none;padding:6px 0 20px}
 .contact-card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:34px 32px;box-shadow:0 14px 40px rgba(28,48,74,.08)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .field{margin-bottom:16px}
