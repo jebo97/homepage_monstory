@@ -126,8 +126,8 @@ footer .cp{font-size:13px;color:var(--t3)}
   .hero-grid,.feat-grid,.show-grid,.steps,.trust{grid-template-columns:1fr}
   .hero{padding:40px 0 36px}.hero h1{font-size:30px}
   .sec-ttl{font-size:23px}
-  .rflow{grid-template-columns:1fr;gap:6px;max-width:280px}
-  .rarrow{margin-top:0;transform:rotate(90deg)}
+  .rflow{grid-template-columns:1fr;gap:30px;max-width:280px}
+  .rarrow{display:none}
 }
 @media(max-width:560px){
   .form-row{grid-template-columns:1fr}
