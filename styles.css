@@ -100,7 +100,7 @@ section{padding:54px 0}
 .radio input{accent-color:var(--teal);margin:0;cursor:pointer}
 .radio:hover{border-color:var(--teal)}
 .radio:has(input:checked){border-color:var(--teal);background:rgba(34,139,134,.08);color:var(--navy)}
-.cf-turnstile{margin-bottom:16px}
+.cf-turnstile{margin-bottom:16px;display:flex;justify-content:center}
 .contact .btn{display:flex;width:fit-content;margin:4px auto 0;padding:13px 48px}
 .contact .btn:disabled{opacity:.85;cursor:default;transform:none}
 .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}
