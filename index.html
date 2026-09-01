@@ -43,7 +43,7 @@ gtag('config','G-HTZ3LV5EJL');
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"/>
 <meta name="theme-color" content="#f0f4f9" media="(prefers-color-scheme: light)"/>
 <meta name="theme-color" content="#1c304a" media="(prefers-color-scheme: dark)"/>
-<link rel="stylesheet" href="styles.css?v=20260704b"/>
+<link rel="stylesheet" href="styles.css?v=20260821c"/>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
@@ -65,10 +65,10 @@ gtag('config','G-HTZ3LV5EJL');
       </div>
       <div class="hero-note">무료 · 미가스마트 엑셀 가져오기 지원 · 여러 기기 동기화</div>
     </div>
-    <div class="shot">
-      <div class="shot-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
-      <img src="screenshots/home.png" alt="MonStory 홈 화면" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-      <div class="shot-ph" style="display:none">📷 홈 대시보드 미리보기<br>(screenshots/home.png)</div>
+    <div class="hero-phone-wrap" aria-hidden="true">
+      <div class="hero-phone">
+        <video class="hero-vid" src="media/receipt-demo.mp4" autoplay muted loop playsinline preload="metadata" poster="screenshots/receipt-1.png"></video>
+      </div>
     </div>
   </div></header>
 
@@ -278,7 +278,7 @@ gtag('config','G-HTZ3LV5EJL');
   </div></section>
 
   <footer><div class="wrap">
-    <span class="cp">© MonStory · 나의 자산 성장 기록</span>
+    <span class="cp">© 2026 APLY Inc. · MonStory</span>
     <span class="links"><a href="https://monstory.app/terms.html">이용약관</a><a href="https://monstory.app/privacy.html">개인정보처리방침</a></span>
   </div></footer>
 
@@ -294,5 +294,14 @@ gtag('config','G-HTZ3LV5EJL');
   </div>
 
   <script src="contact.js" defer></script>
+  <script>
+  /* 모션 최소화 설정 사용자: 히어로 시연 영상 자동재생 대신 정지 */
+  (function(){
+    var v=document.querySelector('.hero-vid'); if(!v) return;
+    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      v.autoplay=false; v.removeAttribute('autoplay'); try{ v.pause(); }catch(e){}
+    }
+  })();
+  </script>
 </body>
 </html>
