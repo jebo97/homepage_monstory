@@ -66,6 +66,7 @@ section{padding:54px 0}
 .faq-item summary::after{content:"+";color:var(--teal);font-weight:800;font-size:20px;line-height:1;flex-shrink:0;transition:transform .2s}
 .faq-item[open] summary::after{transform:rotate(45deg)}
 .faq-item>p{font-size:14px;color:var(--t2);line-height:1.65;padding:0 0 18px;margin-top:-2px}
+.faq-item>p.faq-note{font-size:13px;color:var(--mut,#7b8794)}
 /* showcase */
 .showcase{background:var(--navy);color:#fff}
 .showcase .sec-ttl{color:#fff}.showcase .sec-sub{color:#aebfd4}
