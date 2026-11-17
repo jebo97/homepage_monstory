@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HTZ3LV5EJL"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-HTZ3LV5EJL');
+</script>
+<title>가계부 데이터 백업하고 복원하기 — MonStory 사용 가이드</title>
+<meta name="description" content="몬스토리 거래 내역을 엑셀로, 설정을 JSON으로 백업하고 다시 복원하는 방법. 백업 알림과 휴지통의 차이도 정리했어요."/>
+<link rel="canonical" href="https://home.monstory.app/guide/backup"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="MonStory"/>
+<meta property="og:title" content="가계부 데이터 백업하고 복원하기 — MonStory 사용 가이드"/>
+<meta property="og:description" content="몬스토리 거래 내역을 엑셀로, 설정을 JSON으로 백업하고 다시 복원하는 방법. 백업 알림과 휴지통의 차이도 정리했어요."/>
+<meta property="og:url" content="https://home.monstory.app/guide/backup"/>
+<meta property="og:image" content="https://home.monstory.app/og-image.png"/>
+<meta property="og:locale" content="ko_KR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png?v=5"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
+<meta name="theme-color" content="#f0f4f9"/>
+<link rel="stylesheet" href="/styles.css?v=20261117b"/>
+</head>
+<body class="guide-page">
+  <div class="nav"><div class="wrap">
+    <a href="/"><img src="/logo/MonStory_wordmark.png" alt="MonStory"/></a>
+    <span class="nav-r"><a class="nav-link" href="/guide/">사용 가이드</a><a class="btn btn-p" href="https://monstory.app/">시작하기</a></span>
+  </div></div>
+
+  <main class="guide-wrap">
+    <p class="guide-crumb"><a href="/">홈</a> › <a href="/guide/">사용 가이드</a> › 데이터 백업하고 복원하기</p>
+    <h1>데이터 백업하고 복원하기</h1>
+    <p class="guide-lead">몬스토리의 기록은 계정에 저장되어 여러 기기에서 이어지지만, 만일을 대비해 파일로도 받아 둘 수 있어요. 백업은 <b>거래 내역(엑셀)</b>과 <b>설정(JSON)</b> 두 가지로 나뉩니다.</p>
+
+    <h2>1. 거래 내역 백업 — 엑셀</h2>
+    <ol>
+      <li><b>더보기 › 데이터 관리</b>로 갑니다.</li>
+      <li><b>데이터 내보내기</b>에서 <b>엑셀로 내려받기</b>를 누릅니다.</li>
+    </ol>
+    <figure class="guide-img"><img src="/guide/img/export-area.png" alt="데이터 관리 › 데이터 내보내기 화면" loading="lazy"/></figure>
+    <p>수입·지출·저축·보험·대출·카드대금이 <b>유형별 시트</b>로 나뉜 엑셀 파일 하나가 받아지고, 월별 요약 시트도 함께 들어 있어요. 이 파일은 <b>그대로 다시 올리면 복원</b>됩니다.</p>
+    <p class="guide-note">바로 아래 <b>CSV로 내려받기</b>는 모든 유형을 한 장에 모은 파일이에요. 다른 앱으로 옮기거나 스프레드시트로 볼 때 편하지만, 시트를 나눌 수 없어 <b>복원용으로는 엑셀</b>을 받아 두세요.</p>
+
+    <h2>2. 설정 백업 — JSON</h2>
+    <p>같은 화면 아래 <b>설정 백업 · 복원</b>에서 <b>설정 백업(JSON)</b>을 누르면 설정 파일이 따로 받아집니다.</p>
+    <figure class="guide-img"><img src="/guide/img/settings-backup.png" alt="데이터 관리 › 설정 백업 · 복원" loading="lazy"/></figure>
+    <p>직접 만든 카테고리, 카드·금융상품, 예산, 연례 이벤트, 한 달 기준 같은 <b>설정</b>이 담겨요. 거래 내역은 담기지 않으니 엑셀 백업과 <b>함께</b> 받아 두세요.</p>
+
+    <h2>3. 복원하기</h2>
+    <h3>설정 복원</h3>
+    <p><b>설정 백업 · 복원</b>의 <b>설정 복원</b>을 눌러 JSON 파일을 고릅니다. 지금 설정을 파일 내용으로 덮어쓴다는 확인이 뜨고, 확인하면 바로 적용돼요. 거래 내역은 영향을 받지 않습니다.</p>
+    <h3>거래 내역 복원</h3>
+    <p><b>데이터 가져오기</b>에 백업 엑셀을 그대로 올리면 시트별로 나눠서 한 번에 들어갑니다. 이미 기록이 있는 달이 있으면 <b>기존 내역에 더하기 · 그 달을 파일로 교체 · 그 달은 건너뛰기</b> 중에서 고르는 창이 떠요.</p>
+    <p class="guide-note">같은 백업 파일을 기록이 있는 달에 <b>더하기</b>로 올리면 같은 거래가 두 번 들어갈 수 있어요. 백업 시점으로 되돌리려는 거라면 <b>교체</b>를 고르세요. 교체로 밀려난 내역은 휴지통에서 되돌릴 수 있습니다.</p>
+    <p>설정을 먼저 복원한 뒤 거래 내역을 올리면, 직접 만든 분류가 처음부터 제자리에 보여서 깔끔합니다.</p>
+
+    <h2>4. 백업을 잊지 않도록</h2>
+    <p>마지막 전체 백업 후 <b>90일</b>이 지나면 홈 화면 인사이트에서 "만일을 대비해 가끔 전체 백업을 해두면 좋아요"라고 알려 드려요. 분기마다 한 번, 그리고 분류를 크게 바꾸거나 내역을 많이 지우기 전에 한 번씩 받아 두시길 권합니다.</p>
+
+    <h2>휴지통과는 어떻게 다른가요</h2>
+    <p><b>더보기 › 휴지통</b>은 실수로 지운 내역을 <b>90일 동안</b> 보관했다가 되돌리는 곳이에요. 내역 몇 건을 살리는 데는 편하지만, 기록 전체를 따로 보관하는 백업을 대신하지는 않습니다.</p>
+
+    <div class="guide-cta">
+      <p>몬스토리는 기본 가계부 기능을 무료로 제공해요. 가입 전에 샘플 데이터로 먼저 둘러보셔도 됩니다.</p>
+      <div><a class="btn btn-p" href="https://monstory.app/">무료로 시작하기</a><a class="btn btn-o" href="https://monstory.app/?demo">가입 없이 둘러보기</a></div>
+    </div>
+    <p class="guide-back"><a href="/guide/">← 사용 가이드 목록</a></p>
+  </main>
+
+  <footer><div class="wrap">
+    <span class="cp">© 2026 APLY Inc. · MonStory</span>
+    <span class="links"><a href="https://monstory.app/terms.html">이용약관</a><a href="https://monstory.app/privacy.html">개인정보처리방침</a></span>
+  </div></footer>
+</body>
+</html>

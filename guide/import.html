@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HTZ3LV5EJL"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-HTZ3LV5EJL');
+</script>
+<title>다른 가계부 파일 가져오기 — MonStory 사용 가이드</title>
+<meta name="description" content="다른 가계부 앱의 CSV·엑셀, 직접 만든 엑셀 가계부, 모네타(미가스마트) 보고서를 몬스토리로 옮기는 방법. 저장 전 확인 화면에서 분류와 겹치는 달을 정할 수 있어요."/>
+<link rel="canonical" href="https://home.monstory.app/guide/import"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="MonStory"/>
+<meta property="og:title" content="다른 가계부 파일 가져오기 — MonStory 사용 가이드"/>
+<meta property="og:description" content="다른 가계부 앱의 CSV·엑셀, 직접 만든 엑셀 가계부, 모네타(미가스마트) 보고서를 몬스토리로 옮기는 방법. 저장 전 확인 화면에서 분류와 겹치는 달을 정할 수 있어요."/>
+<meta property="og:url" content="https://home.monstory.app/guide/import"/>
+<meta property="og:image" content="https://home.monstory.app/og-image.png"/>
+<meta property="og:locale" content="ko_KR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png?v=5"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
+<meta name="theme-color" content="#f0f4f9"/>
+<link rel="stylesheet" href="/styles.css?v=20261117b"/>
+</head>
+<body class="guide-page">
+  <div class="nav"><div class="wrap">
+    <a href="/"><img src="/logo/MonStory_wordmark.png" alt="MonStory"/></a>
+    <span class="nav-r"><a class="nav-link" href="/guide/">사용 가이드</a><a class="btn btn-p" href="https://monstory.app/">시작하기</a></span>
+  </div></div>
+
+  <main class="guide-wrap">
+    <p class="guide-crumb"><a href="/">홈</a> › <a href="/guide/">사용 가이드</a> › 다른 가계부 파일 가져오기</p>
+    <h1>다른 가계부 파일 가져오기</h1>
+    <p class="guide-lead">다른 가계부 앱에서 내보낸 파일이나 직접 만든 엑셀 가계부를 몬스토리로 옮기는 방법입니다. 저장하기 전에 확인 화면이 먼저 나와서, 내용을 보고 결정할 수 있어요.</p>
+
+    <h2>1. 어떤 파일을 올릴 수 있나요</h2>
+    <ul>
+      <li><b>다른 가계부 앱에서 내보낸 CSV·엑셀 파일</b></li>
+      <li><b>직접 만든 엑셀 가계부</b> — 수입과 지출을 좌우 두 칸으로 나눠 쓴 가계부도 읽어요.</li>
+      <li><b>모네타(미가스마트) 보고서 엑셀</b></li>
+      <li><b>몬스토리 전체 백업 파일</b> — <a href="/guide/backup">데이터 백업하고 복원하기</a> 참고</li>
+    </ul>
+    <p>파일 첫 줄에 날짜·금액·분류·내역 같은 <b>열 이름</b>이 있으면 그 이름을 읽어서 칸을 맞춥니다. 수입과 지출이 한 파일에 섞여 있어도 나눠서 넣고, 한글이 깨지지 않도록 파일 인코딩(UTF-8·EUC-KR)도 알아서 판별해요.</p>
+
+    <h2>2. 파일 올리기</h2>
+    <ol>
+      <li>몬스토리에서 <b>더보기 › 데이터 관리</b>로 갑니다.</li>
+      <li><b>데이터 가져오기</b>의 점선 상자에 파일을 끌어다 놓거나, 상자를 눌러 파일을 고릅니다. 여러 파일을 한 번에 올려도 됩니다.</li>
+    </ol>
+    <figure class="guide-img"><img src="/guide/img/import-area.png" alt="데이터 관리 › 데이터 가져오기 화면" loading="lazy"/></figure>
+    <p><b>데이터 종류</b>는 보통 <b>자동 인식</b> 그대로 두시면 됩니다. 모네타 보고서처럼 유형이 하나뿐인 파일은 파일 이름으로 종류를 알아보는데, 이름을 바꾸셨다면 알아보지 못할 수 있어요. 그때는 안내가 뜨니, 종류를 골라서 다시 올려 주세요.</p>
+
+    <h2>3. 확인 화면에서 정하기</h2>
+    <p>다른 가계부 앱 파일을 올리면 저장하기 전에 아래와 같은 확인 화면이 먼저 나옵니다. <b>가져오기를 누르기 전까지는 아무것도 저장되지 않아요.</b></p>
+    <figure class="guide-img"><img src="/guide/img/import-confirm.png" alt="다른 가계부 파일 확인 화면" loading="lazy"/></figure>
+    <h3>처음 보는 분류</h3>
+    <p>몬스토리에 없는 분류가 있으면 하나씩 보여드려요. 오른쪽에서 <b>몬스토리의 기존 소분류</b>를 고르면 그쪽으로 들어가고, 그대로 두면 <b>그 이름 그대로 새 소분류</b>로 추가됩니다.</p>
+    <h3>이미 기록이 있는 달</h3>
+    <p>가져오는 달에 이미 내역이 있으면 어떻게 할지 고를 수 있어요.</p>
+    <ul>
+      <li><b>기존 것은 두고 추가</b> — 처음 선택돼 있는 가장 안전한 방법입니다. 다만 같은 내역을 두 번 가져오면 중복될 수 있어요.</li>
+      <li><b>그 달을 교체</b> — 그 달의 기존 기록이 파일 내용으로 바뀝니다.</li>
+      <li><b>그 달은 건너뛰기</b> — 비어 있는 달만 가져옵니다.</li>
+    </ul>
+    <p class="guide-note">모네타 보고서나 몬스토리 백업 같은 엑셀 파일은 이 화면 대신, 기록이 있는 달이 있을 때 <b>더하기 · 교체 · 건너뛰기</b> 중 하나를 고르는 창이 뜹니다. 교체로 밀려난 내역은 <b>더보기 › 휴지통</b>에서 되돌릴 수 있어요.</p>
+
+    <h2>4. 가져온 뒤 '미분류' 정리하기</h2>
+    <p>쓰시던 소분류명은 그대로 가져오지만, 그 이름이 몬스토리의 어느 대분류(식비·주거/통신 등)에 속하는지는 알 수 없어서 정해지기 전까지 <b>미분류</b>로 보일 수 있어요. 내용이 잘못 들어간 건 아닙니다.</p>
+    <p><b>더보기 › 카테고리</b>에서 그 소분류의 대분류를 한 번만 정해 주시면, 소분류명이 같은 거래가 <b>한꺼번에</b> 제자리를 찾습니다.</p>
+
+    <h2>잘 안 될 때</h2>
+    <p>파일을 읽지 못하면 오류 안내에 <b>어떤 열을 읽었는지</b>가 함께 표시됩니다. 그 내용을 앱의 <b>더보기 › 문의하기</b>로 보내 주시면 파일에 맞춰 드릴 수 있어요.</p>
+
+    <div class="guide-cta">
+      <p>몬스토리는 기본 가계부 기능을 무료로 제공해요. 가입 전에 샘플 데이터로 먼저 둘러보셔도 됩니다.</p>
+      <div><a class="btn btn-p" href="https://monstory.app/">무료로 시작하기</a><a class="btn btn-o" href="https://monstory.app/?demo">가입 없이 둘러보기</a></div>
+    </div>
+    <p class="guide-back"><a href="/guide/">← 사용 가이드 목록</a></p>
+  </main>
+
+  <footer><div class="wrap">
+    <span class="cp">© 2026 APLY Inc. · MonStory</span>
+    <span class="links"><a href="https://monstory.app/terms.html">이용약관</a><a href="https://monstory.app/privacy.html">개인정보처리방침</a></span>
+  </div></footer>
+</body>
+</html>
